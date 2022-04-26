@@ -29,7 +29,7 @@ import (
 
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/internal"
-	internalserviceconfig "google.golang.org/grpc/internal/serviceconfig"
+	internalserviceconfig "google.golang.org/grpc/serviceconfig"
 	"google.golang.org/grpc/serviceconfig"
 )
 
