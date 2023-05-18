@@ -29,7 +29,7 @@ import (
 	"golang.org/x/tools/internal/gocommand"
 	"golang.org/x/tools/internal/packagesinternal"
 	"golang.org/x/tools/internal/typeparams"
-	"golang.org/x/tools/internal/typesinternal"
+	"golang.org/x/tools/typesinternal"
 )
 
 // A LoadMode controls the amount of detail to return when loading.

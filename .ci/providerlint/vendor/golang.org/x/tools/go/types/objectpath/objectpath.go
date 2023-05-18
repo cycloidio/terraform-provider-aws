@@ -156,7 +156,7 @@ type encoder struct {
 	namedMethodsMemo map[*types.Named][]*types.Func // memoization of namedMethods()
 }
 
-// Exposed to gopls via golang.org/x/tools/internal/typesinternal
+// Exposed to gopls via golang.org/x/tools/typesinternal
 // pending approval of proposal 58668.
 //
 //go:linkname newEncoderFor

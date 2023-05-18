@@ -22,7 +22,7 @@ func additionalPredeclared() []types.Type {
 	}
 }
 
-// See cmd/compile/internal/types.SplitVargenSuffix.
+// See cmd/compile/types.SplitVargenSuffix.
 func splitVargenSuffix(name string) (base, suffix string) {
 	i := len(name)
 	for i > 0 && name[i-1] >= '0' && name[i-1] <= '9' {
