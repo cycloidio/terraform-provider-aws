@@ -176,14 +176,14 @@ func TestServicesForDirectories(t *testing.T) {
 				t.Errorf("error reading working directory: %s", err)
 			}
 
-			if _, err := os.Stat(fmt.Sprintf("%s/../internal/service/%s", wd, testCase)); os.IsNotExist(err) {
+			if _, err := os.Stat(fmt.Sprintf("%s/../service/%s", wd, testCase)); os.IsNotExist(err) {
 				for _, service := range nonExisting {
 					if service == testCase {
 						t.Skipf("skipping %s because not yet implemented", testCase)
 						break
 					}
 				}
-				t.Errorf("expected %s/../internal/service/%s to exist %s", wd, testCase, err)
+				t.Errorf("expected %s/../service/%s to exist %s", wd, testCase, err)
 			}
 		})
 	}
