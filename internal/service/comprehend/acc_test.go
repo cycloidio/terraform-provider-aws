@@ -11,7 +11,7 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/comprehend"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/id"
 	"github.com/hashicorp/terraform-provider-aws/internal/acctest"
-	"github.com/hashicorp/terraform-provider-aws/internal/conns"
+	"github.com/hashicorp/terraform-provider-aws/conns"
 )
 
 func testAccPreCheck(ctx context.Context, t *testing.T) {

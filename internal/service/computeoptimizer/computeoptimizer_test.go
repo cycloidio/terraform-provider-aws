@@ -9,7 +9,7 @@ import (
 
 	awstypes "github.com/aws/aws-sdk-go-v2/service/computeoptimizer/types"
 	"github.com/hashicorp/terraform-provider-aws/internal/acctest"
-	"github.com/hashicorp/terraform-provider-aws/internal/conns"
+	"github.com/hashicorp/terraform-provider-aws/conns"
 	tfcomputeoptimizer "github.com/hashicorp/terraform-provider-aws/internal/service/computeoptimizer"
 )
 

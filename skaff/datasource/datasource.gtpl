@@ -54,7 +54,7 @@ import (
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/structure"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/validation"
-	"github.com/hashicorp/terraform-provider-aws/internal/conns"
+	"github.com/hashicorp/terraform-provider-aws/conns"
 	"github.com/hashicorp/terraform-provider-aws/internal/create"
 	"github.com/hashicorp/terraform-provider-aws/internal/flex"
 {{- if .IncludeTags }}
@@ -185,11 +185,11 @@ func dataSource{{ .DataSource }}Read(ctx context.Context, d *schema.ResourceData
 	//
 	// If you don't set the ID, the data source will not be stored in state. In
 	// fact, that's how a resource can be removed from state - clearing its ID.
-	// 
+	//
 	// If this data source is a companion to a resource, often both will use the
 	// same ID. Otherwise, the ID will be a unique identifier such as an AWS
 	// identifier, ARN, or name.
-	{{- end }}	
+	{{- end }}
 	d.SetId(out.ID)
 	{{ if .IncludeComments }}
 	// TIP: -- 4. Set the arguments and attributes

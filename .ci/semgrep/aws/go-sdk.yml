@@ -9,7 +9,7 @@ rules:
         - "internal/service/**/*_test.go"
         - "internal/service/**/sweep.go"
         - "internal/acctest/acctest.go"
-        - "internal/conns/**/*.go"
+        - "conns/**/*.go"
     patterns:
       - pattern: |
           import ("$X")

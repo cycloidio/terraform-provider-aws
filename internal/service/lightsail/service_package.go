@@ -11,7 +11,7 @@ import (
 	"github.com/aws/aws-sdk-go-v2/aws/retry"
 	"github.com/aws/aws-sdk-go-v2/service/lightsail"
 	awstypes "github.com/aws/aws-sdk-go-v2/service/lightsail/types"
-	"github.com/hashicorp/terraform-provider-aws/internal/conns"
+	"github.com/hashicorp/terraform-provider-aws/conns"
 	"github.com/hashicorp/terraform-provider-aws/internal/errs"
 )
 

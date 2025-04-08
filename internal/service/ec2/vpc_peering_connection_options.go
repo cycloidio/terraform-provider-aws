@@ -9,7 +9,7 @@ import (
 
 	"github.com/hashicorp/terraform-plugin-sdk/v2/diag"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
-	"github.com/hashicorp/terraform-provider-aws/internal/conns"
+	"github.com/hashicorp/terraform-provider-aws/conns"
 	"github.com/hashicorp/terraform-provider-aws/internal/errs/sdkdiag"
 	"github.com/hashicorp/terraform-provider-aws/internal/tfresource"
 )
@@ -113,8 +113,8 @@ func resourceVPCPeeringConnectionOptionsUpdate(ctx context.Context, d *schema.Re
 
 func resourceVPCPeeringConnectionOptionsDelete(ctx context.Context, d *schema.ResourceData, meta any) diag.Diagnostics {
 	var
-	// Don't do anything with the underlying VPC Peering Connection.
-	diags diag.Diagnostics
+		// Don't do anything with the underlying VPC Peering Connection.
+			diags diag.Diagnostics
 
 	return diags
 }

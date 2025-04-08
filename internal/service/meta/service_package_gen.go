@@ -5,7 +5,7 @@ package meta
 import (
 	"context"
 
-	"github.com/hashicorp/terraform-provider-aws/internal/conns"
+	"github.com/hashicorp/terraform-provider-aws/conns"
 	"github.com/hashicorp/terraform-provider-aws/internal/types"
 )
 

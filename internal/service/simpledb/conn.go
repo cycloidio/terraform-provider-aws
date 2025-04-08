@@ -15,7 +15,7 @@ import (
 	"github.com/aws/aws-sdk-go/aws/endpoints"
 	"github.com/aws/aws-sdk-go/service/simpledb"
 	"github.com/hashicorp/terraform-plugin-log/tflog"
-	"github.com/hashicorp/terraform-provider-aws/internal/conns"
+	"github.com/hashicorp/terraform-provider-aws/conns"
 	"github.com/hashicorp/terraform-provider-aws/internal/errs"
 	"github.com/hashicorp/terraform-provider-aws/names"
 )
@@ -25,8 +25,8 @@ var (
 )
 
 // Adapted from
-// internal/conns/awsclient_gen.go: func (c *AWSClient) SimpleDBConn(ctx context.Context) *simpledb_sdkv1.SimpleDB
-// internal/conns/awsclient.go: func conn[T any](ctx context.Context, c *AWSClient, servicePackageName string, extra map[string]any) (T, error)
+// conns/awsclient_gen.go: func (c *AWSClient) SimpleDBConn(ctx context.Context) *simpledb_sdkv1.SimpleDB
+// conns/awsclient.go: func conn[T any](ctx context.Context, c *AWSClient, servicePackageName string, extra map[string]any) (T, error)
 // internal/service/simpledb/service_package_gen.go: func (p *servicePackage) NewConn(ctx context.Context, config map[string]any) (*simpledb_sdkv1.SimpleDB, error)
 
 func simpleDBConn(ctx context.Context, c *conns.AWSClient) *simpledb.SimpleDB { // nosemgrep:ci.simpledb-in-func-name
@@ -58,7 +58,7 @@ func simpleDBConn(ctx context.Context, c *conns.AWSClient) *simpledb.SimpleDB { 
 }
 
 // Adapted from
-//	internal/conns/awsclient_resolveendpoint_gen.go: func (c *AWSClient) ResolveEndpoint(ctx context.Context, servicePackageName string) string
+//	conns/awsclient_resolveendpoint_gen.go: func (c *AWSClient) ResolveEndpoint(ctx context.Context, servicePackageName string) string
 
 func resolveEndpoint(ctx context.Context, c *conns.AWSClient) string {
 	endpoint := c.Endpoints(ctx)[names.SimpleDB]
@@ -84,7 +84,7 @@ func resolveEndpoint(ctx context.Context, c *conns.AWSClient) string {
 	return endpoint
 }
 
-// Copied from internal/conns/awsclient.go.
+// Copied from conns/awsclient.go.
 
 // serviceBaseEndpointProvider is needed to search for all providers
 // that provide a configured service endpoint

@@ -51,7 +51,7 @@ var _ function.Function = {{ .FunctionLower }}Function{}
 // The New* function returns an instance of the provider function struct. Currently,
 // functions DO NOT follow the self-registration process used by resources
 // and data sources, so this registration function must be manually added
-// to the providers `Functions` method in `internal/provider/fwprovider/provider.go`.
+// to the providers `Functions` method in `provider/fwprovider/provider.go`.
 {{- end }}
 func New{{ .Function }}Function() function.Function {
 	return &{{ .FunctionLower }}Function{}
@@ -64,7 +64,7 @@ func (f {{ .FunctionLower }}Function) Metadata(ctx context.Context, req function
 }
 {{ if .IncludeComments }}
 // TIP: ==== DEFINITION METHOD ====
-// This method contains function details such as description, arguments, and 
+// This method contains function details such as description, arguments, and
 // return values. The types of argument and return values are explicitly
 // defined in this method.
 {{- end }}
@@ -83,7 +83,7 @@ func (f {{ .FunctionLower }}Function) Definition(ctx context.Context, req functi
 }
 {{ if .IncludeComments }}
 // TIP: ==== RUN METHOD ====
-// This method contains the logic of the function, such as manipulating 
+// This method contains the logic of the function, such as manipulating
 // arguments or returning static values.
 {{- end }}
 func (f {{ .FunctionLower }}Function) Run(ctx context.Context, req function.RunRequest, resp *function.RunResponse) {
@@ -96,9 +96,9 @@ func (f {{ .FunctionLower }}Function) Run(ctx context.Context, req function.RunR
 {{ if .IncludeComments }}
 	// TIP: ==== ERROR HANDLING ====
 	// Depending on the function logic being applied, there may be multiple
-	// points at which the function could error. 
+	// points at which the function could error.
 	//
-	// Whenever logic is executed that could return an error, `resp.Error` should 
+	// Whenever logic is executed that could return an error, `resp.Error` should
 	// be set to the return of the `function.ConcatFuncErrors` helper.
 {{- end }}
 	if arg != "foo" {

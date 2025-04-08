@@ -30,7 +30,7 @@ func main() {
 	)
 	g := common.NewGenerator()
 
-	g.Infof("Generating internal/conns/%s", filename)
+	g.Infof("Generating conns/%s", filename)
 
 	data, err := data.ReadAllServiceData()
 	if err != nil {

@@ -18,7 +18,7 @@ import (
 	"github.com/hashicorp/terraform-provider-aws/names"
 )
 
-// go test -bench=BenchmarkSDKProviderInitialization -benchmem -run=Bench -v ./internal/provider
+// go test -bench=BenchmarkSDKProviderInitialization -benchmem -run=Bench -v ./provider
 func BenchmarkSDKProviderInitialization(b *testing.B) {
 	for n := 0; n < b.N; n++ {
 		_, err := New(context.Background())

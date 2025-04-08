@@ -4,7 +4,7 @@ Adding a tag resource, similar to the `aws_ecs_tag` resource, has its own implem
 
 - In `internal/generate`: Ensure the service is supported by all generators. Run `make gen` after any modifications.
 - In `internal/service/{service}/generate.go`: Add the new `//go:generate` call with the correct generator directives. Run `make gen` after any modifications.
-- In `internal/provider/provider.go`: Add the new resource.
+- In `provider/provider.go`: Add the new resource.
 - Run `make test` and ensure there are no failures.
 - Create `internal/service/{service}/tag_gen_test.go` with initial acceptance testing similar to the following (where the parent resource is simple to provision):
 

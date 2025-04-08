@@ -7,7 +7,7 @@ set -euo pipefail
 go test \
     ./internal/acctest/... \
     ./internal/attrmap/... \
-    ./internal/conns/... \
+    ./conns/... \
     ./internal/create/... \
     ./internal/dns/... \
     ./internal/enum/... \
@@ -23,7 +23,7 @@ go test \
     ./internal/logging/... \
     ./internal/maps/... \
     ./internal/namevaluesfilters/... \
-    ./internal/provider/... \
+    ./provider/... \
     ./internal/reflect/... \
     ./internal/retry/... \
     ./internal/sdkv2/... \

@@ -3,7 +3,7 @@ client-connections:
   - any:
       - changed-files:
           - any-glob-to-any-file:
-              - 'internal/conns/**/*'
+              - 'conns/**/*'
 create:
   - any:
       - changed-files:
@@ -77,7 +77,7 @@ provider:
               - '.go-version'
               - '*.md'
               - 'docs/contributing/**/*'
-              - 'internal/provider/**/*'
+              - 'provider/**/*'
               - 'main.go'
               - 'website/docs/index.html.markdown'
 repository:

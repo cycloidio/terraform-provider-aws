@@ -7,7 +7,7 @@ import (
 	"context"
 
 	"github.com/aws/aws-sdk-go-v2/service/secretsmanager"
-	"github.com/hashicorp/terraform-provider-aws/internal/conns"
+	"github.com/hashicorp/terraform-provider-aws/conns"
 	tftags "github.com/hashicorp/terraform-provider-aws/internal/tags"
 	"github.com/hashicorp/terraform-provider-aws/internal/types/option"
 )

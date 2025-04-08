@@ -87,7 +87,7 @@ func (f exampleFunction) Run(ctx context.Context, req function.RunRequest, resp 
 ### Register function to the provider
 
 Once the function is implemented, it must be registered to the provider to be used.
-As only Terraform Plugin Framework supports provider-defined functions, registration occurs on the Plugin Framework provider inside `internal/provider/fwprovider/provider.go`.
+As only Terraform Plugin Framework supports provider-defined functions, registration occurs on the Plugin Framework provider inside `provider/fwprovider/provider.go`.
 Add the `New*` factory function in the `Functions` method to register it.
 
 ```go

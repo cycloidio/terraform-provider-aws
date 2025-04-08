@@ -253,7 +253,7 @@ gen: prereq-go ## Run all Go generators
 	@echo "make: Running Go generators..."
 	$(GO_VER) generate ./...
 	# Generate service package lists last as they may depend on output of earlier generators.
-	$(GO_VER) generate ./internal/provider
+	$(GO_VER) generate ./provider
 	$(GO_VER) generate ./internal/sweep
 
 gen-check: gen ## [CI] Provider Checks / go_generate
@@ -370,7 +370,7 @@ provider-lint: ## [CI] ProviderLint Checks / providerlint
 		-XR005=false \
 		-XS001=false \
 		-XS002=false \
-		$(SVC_DIR)/... ./internal/provider/...
+		$(SVC_DIR)/... ./provider/...
 
 provider-markdown-lint: ## [CI] Provider Check / markdown-lint
 	@echo "make: Provider Check / markdown-lint..."
